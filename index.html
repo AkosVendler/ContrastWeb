@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="./clash-grotesk.css">
+    <link rel="stylesheet" href="./clash-display.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-black font">
+
+    <!-- Loader -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <div class="content" id="content">
+        <div class="nav">
+            <a href="/"><img src="./assets/Logo.svg" alt="Logo"></a>
+            <a class="nav-link" href="./about.html">About</a>
+            <a class="nav-link" href="./work.html">Work</a>
+            <a class="nav-link" href="">Contact</a>
+        </div>
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Contrast Design</h1>
+            </div>
+            <div class="hero-image"></div>
+        </div>
+    
+        <div class="spacer"></div>
+    
+        <section class="info">
+            <div class="header-rows">
+                <div class="header-row"><h1 class="text-bold">Interior</h1></div>
+                <div class="header-row"><h1 class="text-light">Design</h1></div>
+            </div>
+    
+        </section>
+    
+        <section class="about">
+            <h1>Passionate about transforming spaces, I specialize in creating interiors that balance functionality with aesthetics.</h1>
+        </section>
+    
+        <section class="header-info">
+            <p>Founded by</p>
+            <p>Alexa Mariann</p>
+        </section>
+    
+        <section class="whitespace">
+        </section>
+    
+        <section class="pinned">
+            <div class="revealer">
+                <div class="revealer-1"></div>
+                <div class="revealer-2"></div>
+            </div>
+        </section>
+    
+        <section class="website-content">
+            <div class="content-header">
+                <h1 class="content-header-text">\ 2025 \</h1>
+            </div>
+            <div class="slider-counter">
+                <span id="currentSlide">1</span> 
+                <span>From</span>
+                <span id="totalSlides">3</span>
+            </div>
+            <div class="slider">
+                <div class="slider-container">
+                    <!-- Képek helye -->
+                    <img src="./assets/sliderimage.png" alt="Kép 1" data-page="kep1.html">
+                    <img src="./assets/sliderimage2.png" alt="Kép 2" data-page="kep2.html">
+                    <img src="./assets/sliderimage3.png" alt="Kép 3" data-page="kep3.html">
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="footer-container">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Work</a>
+                <a href="">Terms</a>
+                <a href="">Contact</a>
+            </div>
+            <p>copyright © ContrastDesgin 2025</p>
+        </section>
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Lenis (smooth scroll) -->
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
+
+    <!-- ScrollTrigger plugin (for GSAP) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Your custom script -->
+    <script src="./script.js"></script>
+    <script src="./loader.js"></script>
+</body>
+
+</html>

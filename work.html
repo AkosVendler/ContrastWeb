@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORK</title>
+    <link rel="stylesheet" href="./clash-grotesk.css">
+    <link rel="stylesheet" href="./clash-display.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./imageviewer.css">
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <div class="nav">
+        <a href="/"><img src="./assets/Logo.svg" alt="Logo"></a>
+        <a class="nav-link navhover" href="./about.html">About</a>
+        <a class="nav-link navhover" href="./work.html">Work</a>
+        <a class="nav-link navhover" href="">Contact</a>
+    </div>
+
+    <div class="heading">
+        <div class="heading-text">
+            <h1>WORK.</h1>
+        </div>
+        <div class="heading-selector">
+            <div class="selector">
+                <label class="selector-item">
+                  <input type="radio" name="view" value="list" checked>
+                  <span class="custom-radio"></span>
+                  <span class="text">List</span>
+                </label>
+                <label class="selector-item">
+                  <input type="radio" name="view" value="grid">
+                  <span class="custom-radio"></span>
+                  <span class="text">Grid</span>
+                </label>
+              </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="img-preview">
+            <img src="./assets/sliderimage.png" alt="">
+        </div>
+    
+        <div class="minimap">
+            <div class="indicator"></div>
+            <div class="items">
+                <div class="item"><img src="./assets/sliderimage2.png" alt=""></div>
+                <div class="item"><img src="./assets/sliderimage3.png" alt=""></div>
+                <div class="item"><img src="./assets/sliderimage.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="footer">
+        <div class="footer-container">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="">Work</a>
+            <a href="">Terms</a>
+            <a href="">Contact</a>
+        </div>
+        <p>copyright © ContrastDesgin 2025</p>
+    </section>
+    
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Lenis (smooth scroll) -->
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+
+    <!-- ScrollTrigger plugin (for GSAP) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="work.js"></script>
+    <script src="loader.js"></script>
+</body>
+</html>

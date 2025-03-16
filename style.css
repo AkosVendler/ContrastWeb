@@ -1,0 +1,506 @@
+/* Alap stílusok */
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navigációs sáv */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 40px;
+}
+
+.navhover .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav img {
+    max-height: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: light;
+    text-transform: uppercase;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+.spacer {
+    width: 100%;
+    height: 20vh;
+}
+
+.header-row h1 {
+    font-size: 15rem;
+}
+
+
+/* Hero szakasz */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 750px;
+}
+
+.hero-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background: url('assets/bg.png') center/contain no-repeat;
+}
+
+/* Információs szakasz */
+section.info {
+    padding: 40px 20px;
+    text-align: center;
+    height: 150vh;
+    width: 100vw;
+}
+
+.header-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+}
+
+.header-row h1 {
+    margin: 0;
+    text-transform: uppercase;
+    padding: 0;
+    line-height: 0.9;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.header-info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 200;
+    height: 100vh;
+}
+
+.header-info p {
+    padding: 0 2em;
+}
+
+section.pinned {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 250vh;
+    z-index: 2;
+}
+
+section.whitespace {
+    position: relative;
+    width: 100%;
+    height: 300vh;
+    background-color: #000;
+    z-index: -1;
+}
+
+.revealer {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    top: 6.5%;
+    left: 45%;
+    margin-top: 325px;
+    width: 120px;
+    height: 120px;
+}
+
+.revealer .revealer-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    clip-path: polygon(0% 45%, 100% 45%, 100% 55%, 0% 55%);
+    /* Kereszt 1 */
+}
+
+.revealer .revealer-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    clip-path: polygon(0% 45%, 100% 45%, 100% 55%, 0% 55%);
+    /* Kereszt 2 */
+    transform: rotate(90deg);
+}
+
+
+section.website-content {
+    position: relative;
+    width: 100vw;
+    height: 150vh;
+    background: #fff;
+    color: #000;
+    z-index: 10;
+}
+
+section.about h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+    width: 650px;
+    padding-left: 4rem;
+}
+
+.website-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content-header-text {
+    font-weight: 200;
+}
+
+.slider {
+    position: relative;
+    max-width: 520px;
+    object-fit: cover;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.slider-counter {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+    margin-bottom: 30px;
+}
+
+.slider-counter span {
+    font-weight: 500;
+}
+
+section.footer {
+    position: relative;
+    bottom: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 130vh;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.footer-container {
+    width: 100vw;
+    height: 120vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+.footer-container a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.footer p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+
+.loader-container {
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 65px;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #fff;
+    animation: l5 2.5s infinite;
+}
+
+.loader:after {
+    animation-delay: -1.25s;
+    border-radius: 0;
+}
+
+@keyframes l5 {
+    0% {
+        inset: 0 35px 35px 0
+    }
+
+    12.5% {
+        inset: 0 35px 0 0
+    }
+
+    25% {
+        inset: 35px 35px 0 0
+    }
+
+    37.5% {
+        inset: 35px 0 0 0
+    }
+
+    50% {
+        inset: 35px 0 0 35px
+    }
+
+    62.5% {
+        inset: 0 0 0 35px
+    }
+
+    75% {
+        inset: 0 0 35px 35px
+    }
+
+    87.5% {
+        inset: 0 0 35px 0
+    }
+
+    100% {
+        inset: 0 35px 35px 0
+    }
+}
+
+
+
+/*About me CSS*/
+
+.about-hero {
+    width: 100%;
+    height: 100vh;
+    padding: 50px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+    box-sizing: border-box;
+    margin-top: 20%;
+}
+
+.about-hero-h1 {
+    font-weight: 400;
+    font-size: 23.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.about-hero img {
+    width: 100%;
+}
+
+
+.scroll-reveal {
+    padding: 50px 40px;
+    text-align: left;
+    padding-block: clamp(8rem, 25vh, 20rem);
+    height: 70vh;
+    margin-top: 600px;
+}
+
+.scroll-reveal p {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    max-width: 55ch;
+}
+
+.scroll-reveal>* {
+    margin: 0;
+}
+
+/* demo only */
+
+.scroll-reveal span {
+    color: hsl(0 0% 100% / 0.2);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-image: linear-gradient(90deg, white, white);
+    animation: scroll-reveal linear forwards;
+    animation-timeline: view(y);
+}
+
+.scroll-reveal h2 span {
+    animation-range-start: cover 20vh;
+    animation-range-end: cover 30vh;
+}
+
+.scroll-reveal p span {
+    animation-range-start: cover 22.5vh;
+    animation-range-end: cover 50vh;
+}
+
+@keyframes scroll-reveal {
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+
+.about-info {
+    width: 100%;
+    height: 100vh;
+    margin-top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 50px 40px;
+}
+
+.upper-info {
+    width: 100%;
+    height: auto;
+    font-size: 6.5rem;
+}
+
+.upper-info p {
+    margin: 0;
+}
+
+.down-info {
+    margin-top: 200px;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    font-size: 6rem;
+}
+
+/*work*/
+
+.heading {
+    padding: 200px 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.heading-text h1 {
+    font-size: 10rem;
+    margin: 0;
+    font-weight: 500;
+    line-height: 0.8;
+}
+
+
+.selector {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .selector-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .selector-item input[type="radio"] {
+    display: none; /* Elrejtjük az eredeti radio gombot */
+  }
+  
+  .custom-radio {
+    width: 10px;
+    height: 10px;
+    background-color: #606060;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .selector-item input[type="radio"]:checked + .custom-radio {
+    background-color: white;
+    border-color: white;
+  }
+  
+  .text {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #606060;
+  }
+  
+  .selector-item input[type="radio"]:checked ~ .text {
+    color: white;
+  }
+
