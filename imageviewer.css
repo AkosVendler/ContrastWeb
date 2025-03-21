@@ -71,7 +71,8 @@
 
 @media (max-width: 900px) {
     body {
-        overflow-x: hidden;
+        overflow: hidden;
+        touch-action: none;
     }
     .container {
         touch-action: none;

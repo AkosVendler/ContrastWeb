@@ -224,11 +224,7 @@ container.addEventListener("touchmove", (e) => {
         targetTranslate = Math.min(Math.max(targetTranslate - scrollVelocity, -maxTranslate), 0);
 
         touchStartY = touchY;
-
-        // Csak akkor hívjuk meg a preventDefault-ot, ha valóban elmozdultunk
-        if (Math.abs(deltaY) > 5) {
-            e.preventDefault();
-        }
+        e.preventDefault();
     }
 }, { passive: false });
 

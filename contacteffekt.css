@@ -1,0 +1,89 @@
+.awards {
+    min-height: 100vh;
+    height: max-content;
+}
+
+.award-header {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award-header h1 {
+    font-size: 10rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20vh;
+    margin: 0;
+}
+
+.awards-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.award {
+    position: relative;
+    width: 100%;
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 70px 40px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.award h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.award-overlay {
+    position: absolute;
+    top: -100%; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    transition: all 0.5s ease;
+    padding: 70px 40px;
+}
+
+.award-number,
+.award-text {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.award-text {
+    font-size: 2rem;
+}
+
+
+.award:hover .award-overlay {
+    top: 0%;  /* Az overlay lecsúszik a sorra */
+    color: black; /* A szöveg színe fekete */
+}
+
+.award:hover .award-number,
+.award:hover .award-text {
+    color: black; /* A szöveg színe fekete */
+}
