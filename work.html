@@ -15,7 +15,7 @@
     </div>
 
     <div class="nav">
-        <a href="/"><img src="./assets/Logo.svg" alt="Logo"></a>
+        <a href="./index.html"><img src="./assets/Logo.svg" alt="Logo"></a>
         <a class="nav-link navhover" href="./about.html">About</a>
         <a class="nav-link navhover" href="./work.html">Work</a>
         <a class="nav-link navhover" href="./contact.html">Contact</a>
@@ -27,41 +27,50 @@
         </div>
         <div class="heading-selector">
             <div class="selector">
-                <label class="selector-item">
-                  <input type="radio" name="view" value="list" checked>
+                <label  class="selector-item">
+                  <input id="listradio" type="radio" name="view" value="list" checked>
                   <span class="custom-radio"></span>
                   <span class="text">List</span>
                 </label>
-                <label class="selector-item">
-                  <input type="radio" name="view" value="grid">
+                <label  class="selector-item">
+                  <input id="gridradio" type="radio" name="view" value="grid">
                   <span class="custom-radio"></span>
                   <span class="text">Grid</span>
                 </label>
               </div>
         </div>
     </div>
-    <div class="container">
-        <div class="img-preview">
-            <img src="./assets/sliderimage.png" alt="">
+        <div class="container view">
+            <div class="img-preview">
+                <img src="./assets/sliderimage.png" alt="">
+            </div>
+        
+            <div class="minimap">
+                <div class="indicator"></div>
+                <div class="items">
+                    <div class="item"><img src="./assets/sliderimage2.png" alt=""></div>
+                    <div class="item"><img src="./assets/sliderimage3.png" alt=""></div>
+                    <div class="item"><img src="./assets/sliderimage.png" alt=""></div>
+                </div>
+            </div>
         </div>
-    
-        <div class="minimap">
-            <div class="indicator"></div>
-            <div class="items">
-                <div class="item"><img src="./assets/sliderimage2.png" alt=""></div>
-                <div class="item"><img src="./assets/sliderimage3.png" alt=""></div>
-                <div class="item"><img src="./assets/sliderimage.png" alt=""></div>
+        <div class="grid-container view">
+            <div class="grid-img-container">
+                <img src="./assets/sliderimage2.png" alt="">
+                <img src="./assets/sliderimage3.png" alt="">
+                <img src="./assets/sliderimage.png" alt="">
             </div>
         </div>
     </div>
+    
     
     <section class="footer">
         <div class="footer-container">
             <a href="./index.html">Home</a>
             <a href="./about.html">About</a>
-            <a href="">Work</a>
+            <a href="./work.html">Work</a>
             <a href="">Terms</a>
-            <a href="">Contact</a>
+            <a href="./contact.html">Contact</a>
         </div>
         <p>copyright © ContrastDesgin 2025</p>
     </section>

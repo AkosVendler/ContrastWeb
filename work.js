@@ -244,3 +244,55 @@ window.addEventListener("resize", () => {
 itemImages[0].style.opacity = activeItemOpacity;
 updatePreviewImage(0);
 animate();
+
+const imgcontainer = document.querySelector(".container");
+const gridcontainer = document.querySelector(".grid-container");
+const listradio = document.getElementById("listradio");
+const gridradio = document.getElementById("gridradio");
+
+function showView(toShow, toHide) {
+  toHide.classList.remove("show");
+
+  setTimeout(() => {
+    toHide.style.display = "none";
+    toShow.style.display = "block";
+
+    requestAnimationFrame(() => {
+      toShow.classList.add("show");
+    });
+  }, 300);
+}
+
+function updateView() {
+  if (listradio.checked) {
+    showView(imgcontainer, gridcontainer);
+  } else if (gridradio.checked) {
+    showView(gridcontainer, imgcontainer);
+  }
+}
+
+function handleResize() {
+  if (window.innerWidth <= 900) {
+    gridradio.disabled = true;
+    if (gridradio.checked) {
+      listradio.checked = true;
+      updateView();
+    }
+  } else {
+    gridradio.disabled = false;
+  }
+}
+
+window.addEventListener("resize", () => {
+  handleResize();
+  updateView(); // hogy frissüljön a nézet, ha újra engedélyezett
+});
+
+listradio.addEventListener("change", updateView);
+gridradio.addEventListener("change", updateView);
+
+// Induláskor is beállítjuk
+handleResize();
+updateView();
+
+
