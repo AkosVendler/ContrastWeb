@@ -340,10 +340,6 @@ section.footer {
 }
 
 @media (max-width: 900px) {
-    body {
-        overflow: hidden;
-        touch-action: none;
-    }
     
     .spacer {
         display: none;
