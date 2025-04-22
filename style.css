@@ -664,6 +664,9 @@ section.footer {
   
 
   @media (max-width: 900px) { 
+    body {
+        overflow-x: hidden;
+    }
     .heading {
         padding: 200px 20px;
         display: flex;
@@ -722,6 +725,9 @@ section.footer {
 }
 
 @media (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+    }
     .contact-hero {
         margin-bottom: 700px;
     }
