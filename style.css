@@ -15,6 +15,7 @@ body {
     padding: 50px 40px;
 }
 
+
 .navhover .underline {
     position: absolute;
     bottom: 0;
@@ -731,6 +732,19 @@ section.footer {
     .contact-hero {
         margin-bottom: 700px;
     }
+}
+
+@media (max-width: 430px) {
+  /* ha kicsi a hely, igazítsd pl. a menüt, paddinget csökkents, vagy rakd sorba */
+  nav {
+     padding: 50px 20px;
+  }
+  .heading-text h1 {
+    font-size: 8rem;
+    margin: 0;
+    font-weight: 500;
+    line-height: 0.8;
+}  
 }
 
 
