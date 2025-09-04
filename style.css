@@ -404,6 +404,25 @@ section.footer {
     }
 }
 
+@media (max-width: 750px) {
+    .hero-text h1 {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-text h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+}
+
+
 
 
 /*About me CSS*/
