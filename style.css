@@ -530,6 +530,16 @@ section.footer {
     font-size: 3rem;
 }
 
+@media (max-width: 1910px){
+    .about-hero-h1 {
+        font-weight: 400;
+        font-size: 16rem;
+        text-transform: uppercase;
+        margin: 0;
+    }
+}
+
+
 @media (max-width: 900px) {
     body {
         overflow-x: hidden;
@@ -601,14 +611,6 @@ section.footer {
     }
 }
 
-@media (max-width: 1910px){
-    .about-hero-h1 {
-        font-weight: 400;
-        font-size: 22rem;
-        text-transform: uppercase;
-        margin: 0;
-    }
-}
 
 @media (max-width: 1870px) {
     .about-hero-h1 {
