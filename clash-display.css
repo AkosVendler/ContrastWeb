@@ -118,4 +118,10 @@
   text-transform: uppercase;
 }
 
+.wrapper h2 {
+  font-family: "ClashDisplay-Variable", sans-serif;
+  font-variation-settings: "wght" 500; /* vagy más súly */
+  font-size: 4rem;
+}
+
 

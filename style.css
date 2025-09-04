@@ -345,7 +345,7 @@ section.footer {
     body {
         overflow-x: hidden;
     }
-    
+
     .spacer {
         display: none;
     }
@@ -357,7 +357,7 @@ section.footer {
         line-height: 0.9;
         font-size: 4.5rem;
     }
-    
+
     .revealer {
         position: absolute;
         transform: translate(-50%, 0%);
@@ -393,7 +393,7 @@ section.footer {
         color: #fff;
         font-size: 1rem;
     }
-    
+
     .footer-container {
         width: 100vw;
         height: 120vh;
@@ -515,6 +515,7 @@ section.footer {
     body {
         overflow-x: hidden;
     }
+
     .about-hero {
         width: 100%;
         height: 60vh;
@@ -534,7 +535,7 @@ section.footer {
         text-transform: uppercase;
         margin: 0;
     }
-    
+
     .scroll-reveal {
         padding: 40px 20px;
         text-align: left;
@@ -542,7 +543,7 @@ section.footer {
         height: 70vh;
         margin-top: 120px;
     }
-    
+
     .scroll-reveal p {
         font-size: 1rem;
         line-height: 1.3;
@@ -567,11 +568,11 @@ section.footer {
         height: auto;
         font-size: 2.5rem;
     }
-    
+
     .upper-info p {
         margin: 0;
     }
-    
+
     .down-info {
         margin-top: 200px;
         width: 100%;
@@ -602,19 +603,20 @@ section.footer {
     display: flex;
     flex-direction: column;
     gap: 6px;
-  }
-  
-  .selector-item {
+}
+
+.selector-item {
     display: flex;
     align-items: center;
     cursor: pointer;
-  }
-  
-  .selector-item input[type="radio"] {
-    display: none; /* Elrejtjük az eredeti radio gombot */
-  }
-  
-  .custom-radio {
+}
+
+.selector-item input[type="radio"] {
+    display: none;
+    /* Elrejtjük az eredeti radio gombot */
+}
+
+.custom-radio {
     width: 10px;
     height: 10px;
     background-color: #606060;
@@ -623,78 +625,84 @@ section.footer {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s, border-color 0.3s;
-  }
-  
-  .selector-item input[type="radio"]:checked + .custom-radio {
+}
+
+.selector-item input[type="radio"]:checked+.custom-radio {
     background-color: white;
     border-color: white;
-  }
-  
-  .text {
+}
+
+.text {
     font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 300;
     color: #606060;
-  }
-  
-  .selector-item input[type="radio"]:checked ~ .text {
+}
+
+.selector-item input[type="radio"]:checked~.text {
     color: white;
-  }
+}
 
 
-  .grid-img-container {
-    padding:0 40px;
+.grid-img-container {
+    padding: 0 40px;
     cursor: pointer;
-  }
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-  .grid-img-container img {
-    max-width: 600px;
-  }
+.grid-img-container img {
+    max-width: 650px;
+    width: 100%;
+}
 
 
 .view {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     display: none;
-  }
-  
-  .view.show {
+}
+
+.view.show {
     display: block;
     opacity: 1;
-  }
-  
+}
 
-  @media (max-width: 900px) { 
+
+@media (max-width: 900px) {
     body {
         overflow-x: hidden;
     }
+
     .heading {
         padding: 200px 20px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
     }
+
     .heading-text h1 {
         font-size: 6rem;
         position: relative;
         left: -50px;
         padding-bottom: 50px;
     }
-    
-  }
+
+}
 
 
 /*contactpage*/
 
 .contact-hero {
- width: 100%;
- height: 50vh;
- padding: 50px 40px;
- display: flex;
- flex-direction: column;
- gap: 50px;
- margin-top: 15vh;
- perspective: 1000px;
+    width: 100%;
+    height: 50vh;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 15vh;
+    perspective: 1000px;
 
 }
 
@@ -729,23 +737,223 @@ section.footer {
     body {
         overflow-x: hidden;
     }
+
     .contact-hero {
         margin-bottom: 700px;
     }
 }
 
 @media (max-width: 430px) {
-  /* ha kicsi a hely, igazítsd pl. a menüt, paddinget csökkents, vagy rakd sorba */
-  nav {
-     padding: 50px 20px;
-  }
-  .heading-text h1 {
-    font-size: 4rem;
-    margin: 0;
-    font-weight: 500;
-    line-height: 0.8;
-}  
+    body {
+        overflow-x: hidden;
+    }
+
+    /* ha kicsi a hely, igazítsd pl. a menüt, paddinget csökkents, vagy rakd sorba */
+    nav {
+        padding: 50px 20px;
+    }
+
+    .heading-text h1 {
+        font-size: 4rem;
+        margin: 0;
+        font-weight: 500;
+        line-height: 0.8;
+    }
 }
 
 
 
+.wrapper {
+    margin-top: 170px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.left-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    height: 100vh;
+}
+
+.left-wrapper p {
+    font-weight: 400;
+}
+
+.left-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+}
+
+.link {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.link img {
+    width: 20%;
+}
+
+.right-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-wrapper img {
+    width: 900px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-description {
+    max-width: 400px;
+    font-size: 1.2rem;
+}
+
+.right-description {
+    max-width: 400px;
+    font-size: 1.2rem;
+}
+
+.work-image-gallery img {
+    width: 100%;
+}
+
+.work-image-gallery {
+    margin-top: 20vh;
+    display: grid;
+    padding: 0 40px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.image1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.image2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.image3 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.image4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+
+@media (max-width: 1280px) {
+    .left-description {
+        max-width: 300px;
+        font-size: 1.2rem;
+    }
+
+    .right-description {
+        max-width: 300px;
+        font-size: 1.2rem;
+    }
+
+    .right-wrapper img {
+        width: 600px;
+        height: 350px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .left-wrapper {
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 20vh;
+        
+    }
+
+    .right-wrapper {
+        flex-direction: column-reverse;
+        gap: 5vh;
+    }
+
+    .description {
+        flex-direction: column;
+    }
+
+    .left-description {
+        max-width: 300px;
+        font-size: 1.2rem;
+    }
+
+    .right-description {
+        max-width: 300px;
+        font-size: 1.2rem;
+    }
+
+    .link {
+        justify-content: center;
+    }
+
+    .left-titles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1vh;
+    }
+
+    .right-wrapper img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .work-image-gallery {
+        margin-top: 70vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 20px;
+    }
+    .image1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    .image2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    
+    .image3 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+    .image4 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    
+}

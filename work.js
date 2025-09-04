@@ -294,5 +294,3 @@ gridradio.addEventListener("change", updateView);
 // Induláskor is beállítjuk
 handleResize();
 updateView();
-
-
