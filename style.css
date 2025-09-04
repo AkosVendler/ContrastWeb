@@ -533,7 +533,7 @@ section.footer {
 @media (max-width: 1910px){
     .about-hero-h1 {
         font-weight: 400;
-        font-size: 16rem;
+        font-size: 18rem;
         text-transform: uppercase;
         margin: 0;
     }
@@ -612,14 +612,14 @@ section.footer {
 }
 
 
-@media (max-width: 1870px) {
+/*@media (max-width: 1870px) {
     .about-hero-h1 {
         font-weight: 400;
         font-size: clamp(4.5rem, 0.7rem + 19vw, 23.5rem);
         text-transform: uppercase;
         margin: 0;
     }
-}
+}*/
 
 @media (max-width: 1490px) {
     .about-hero-h1 {
