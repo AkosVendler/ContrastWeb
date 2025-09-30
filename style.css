@@ -513,22 +513,19 @@ section.footer {
 }
 
 .upper-info {
-    width: 100%;
     height: auto;
-    font-size: 3.5rem;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 3rem;
 }
 
 .upper-info p {
     margin: 0;
+    width: 60%;
+    line-height: 1.5;
 }
 
-.down-info {
-    margin-top: 200px;
-    width: 100%;
-    height: auto;
-    text-align: right;
-    font-size: 3rem;
-}
 
 @media (max-width: 1910px){
     .about-hero-h1 {
@@ -696,40 +693,6 @@ section.footer {
     line-height: 0.8;
 }
 
-
-.selector {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.selector-item {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.selector-item input[type="radio"] {
-    display: none;
-    /* Elrejtjük az eredeti radio gombot */
-}
-
-.custom-radio {
-    width: 10px;
-    height: 10px;
-    background-color: #606060;
-    margin-right: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.selector-item input[type="radio"]:checked+.custom-radio {
-    background-color: white;
-    border-color: white;
-}
-
 .text {
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -737,36 +700,95 @@ section.footer {
     color: #606060;
 }
 
-.selector-item input[type="radio"]:checked~.text {
-    color: white;
-}
+
+    
 
 
-.grid-img-container {
-    padding: 0 40px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.grid-img-container img {
-    max-width: 650px;
+.gallery-container {
     width: 100%;
+    height: 200vh;
+    padding: 0 40px;
 }
 
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* alap: 2 oszlop */
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    width: 100%;
+    height: auto; /* ne legyen fix vh, hanem alkalmazkodjon */
+    margin-bottom: 40px;
+  }
+  
+  .div1, .div2 {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    max-height: 700px; /* opcionális, hogy ne nyúljon végtelenre */
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  }
+  
+  .project-desc {
 
-.view {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    display: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 5px 10px;
+  }
+  
+  /* RESPONSIVE BREAKPOINTS */
+  
+  /* Tablet - 900px alatt egy oszlop */
+  @media (max-width: 900px) {
+    .grid-gallery {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+    .gallery-image {
+      max-height: 400px;
+    }
+  }
+  
+  /* Mobil - 600px alatt */
+  @media (max-width: 600px) {
+    .gallery-image {
+      max-height: 300px;
+    }
+    .project-desc {
+      font-size: 1rem;
+      padding: 4px 8px;
+    }
+  }
+
+.gallery-image.tilt-left:hover {
+    transform: rotate(-1deg) scale(1.03);
+  }
+  
+  .gallery-image.tilt-right:hover {
+    transform: rotate(1deg) scale(1.03);
+  }
+
+.project-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 10vh;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
-.view.show {
-    display: block;
-    opacity: 1;
+.project-desc p {
+    margin:5px 10px;
 }
-
 
 @media (max-width: 900px) {
     body {
@@ -774,17 +796,19 @@ section.footer {
     }
 
     .heading {
-        padding: 200px 20px;
+        padding: 100px 20px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        align-items:  flex-start;
     }
 
     .heading-text h1 {
         font-size: 6rem;
         position: relative;
         left: -50px;
-        padding-bottom: 50px;
+        padding-bottom: 0px;
+        padding-left: 70px;
     }
 
 }
@@ -815,8 +839,8 @@ section.footer {
 }
 
 .contact-hero p {
-    width: 30%;
-    font-size: 1.1rem;
+    width: 20%;
+    font-size: 1.2rem;
 }
 
 .interactive-word {
