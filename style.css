@@ -241,6 +241,7 @@ section.footer {
     width: 100vw;
     height: 130vh;
     display: flex;
+    align-items: center;
     gap: 50px;
     flex-direction: column;
 }
@@ -419,6 +420,10 @@ section.footer {
 @media (max-width: 400px) {
     .hero-text h1 {
         font-size: 3rem;
+    }
+    .footer p {
+        width: 70%;
+        text-align: center;
     }
 }
 
@@ -617,6 +622,30 @@ section.footer {
         margin: 0;
     }
 }*/
+
+@media (max-width: 900px) {
+    .upper-info p {
+        font-size: 2rem;
+    }
+}    
+
+@media (max-width: 770px) {
+    .upper-info p {
+        font-size: 1.5rem;
+    }
+}  
+
+@media (max-width: 500px) {
+
+    .about-info {
+        height: 60vh;
+    }
+
+    .upper-info p {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+}   
 
 @media (max-width: 1490px) {
     .about-hero-h1 {
