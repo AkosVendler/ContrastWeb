@@ -1036,6 +1036,7 @@ section.footer {
 
     .wrapper {
         flex-direction: column;
+        padding-bottom: 25vh;
     }
 
     .left-wrapper {
@@ -1053,7 +1054,7 @@ section.footer {
 
     .description {
         flex-direction: column;
-        padding-bottom: 25vh;
+
     }
 
     .left-description {
