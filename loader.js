@@ -1,9 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Loader eltüntetése animációval
+    // Loader aktiválása: fekete háttér az address barhoz (iOS fix)
+    function showLoader() {
+        document.body.classList.add('loader-active');
+        document.documentElement.style.backgroundColor = '#000'; // html háttér fekete
+        // Opcionális: ha a loader kezdetben hidden, itt tedd láthatóvá
+        // const loaderContainer = document.querySelector(".loader-container");
+        // loaderContainer.style.display = "flex";
+    }
+
+    // Loader deaktiválása: visszaállítás
+    function hideLoader() {
+        document.body.classList.remove('loader-active');
+        document.documentElement.style.backgroundColor = ''; // Visszaállítás az eredeti színre
+    }
+
+    // Indítsd el a loadert azonnal (mivel már látható a CSS-ben)
+    showLoader();
+
+    // Loader eltüntetése animációval (3s után)
     setTimeout(() => {
         const loaderContainer = document.querySelector(".loader-container");
 
-        // Elmentjük a scroll pozíciót és lefagyasztjuk a body-t
+        // Elmentjük a scroll pozíciót és lefagyasztjuk a body-t (ez kiegészíti a CSS overflow: hidden-t)
         const scrollY = window.scrollY;
         document.body.style.position = "fixed";
         document.body.style.top = `-${scrollY}px`;
@@ -21,6 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.style.top = "";
                 document.body.style.width = "";
                 window.scrollTo(0, scrollY);
+
+                // Loader deaktiválása (fekete háttér eltávolítása)
+                hideLoader();
 
                 // Navbar és hero text animáció indítása
                 let tl = gsap.timeline();
@@ -44,4 +65,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, 3000);
 });
-
