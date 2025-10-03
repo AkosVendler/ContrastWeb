@@ -753,6 +753,7 @@ section.footer {
     width: 100%;
     height: auto;
     position: relative;
+    overflow: hidden;
   }
   
   .gallery-image {
@@ -761,6 +762,7 @@ section.footer {
     max-height: 700px; /* opcionális, hogy ne nyúljon végtelenre */
     object-fit: cover;
     cursor: pointer;
+    transform: scale(1.2);
     transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
   }
   
@@ -796,13 +798,11 @@ section.footer {
     }
   }
 
-.gallery-image.tilt-left:hover {
-    transform: rotate(-1deg) scale(1.03);
+  .gallery-image:hover {
+    filter: opacity(0.8);
+    transform: scale(1);
   }
-  
-  .gallery-image.tilt-right:hover {
-    transform: rotate(1deg) scale(1.03);
-  }
+
 
 .project-desc {
     width: 100%;

@@ -110,12 +110,3 @@ lenis.raf(time * 1000);
 });
 
 gsap.ticker.lagSmoothing(0);
-
-document.querySelectorAll('.gallery-image').forEach(img => {
-    // 50-50% eséllyel bal vagy jobb
-    if (Math.random() < 0.5) {
-      img.classList.add('tilt-left');
-    } else {
-      img.classList.add('tilt-right');
-    }
-  });

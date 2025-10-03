@@ -2,11 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Loader eltüntetése animációval
     setTimeout(() => {
         const loaderContainer = document.querySelector(".loader-container");
+        document.body.style.overflow = "hidden";
 
         gsap.to(loaderContainer, { 
             opacity: 0, 
             duration: 0.4, 
             onComplete: () => {
+                document.body.style.overflow = "auto";
                 loaderContainer.style.display = "none";
             }
         });
