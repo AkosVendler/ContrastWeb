@@ -1084,7 +1084,7 @@ section.footer {
     }
 
     .work-image-gallery {
-        padding-top: 70vh;
+        padding-top: 100vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
