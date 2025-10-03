@@ -1,6 +1,6 @@
 /* Alap stílusok */
 body {
-    background: #000;
+    background-color: #000;
     color: white;
     margin: 0;
     padding: 0;
@@ -279,16 +279,6 @@ section.footer {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .loader-container::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: env(safe-area-inset-bottom);
-    background: #000;
   }
   
   
