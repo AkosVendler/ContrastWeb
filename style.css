@@ -1015,6 +1015,11 @@ section.footer {
 
 
 @media (max-width: 1280px) {
+
+    .description {
+        padding-bottom: 200px;
+    }
+
     .left-description {
         max-width: 300px;
         font-size: 1.2rem;
