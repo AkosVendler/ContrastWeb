@@ -273,7 +273,7 @@ section.footer {
     position: fixed;
     background-color: #000;
     width: 100%;
-    height: 100dvh; /* <<< ez az iOS új viewport magasság */
+    height: 100%; /* <<< ez az iOS új viewport magasság */
     z-index: 50;
     opacity: 1;
     display: flex;
