@@ -1053,6 +1053,7 @@ section.footer {
 
     .description {
         flex-direction: column;
+        padding-bottom: 25vh;
     }
 
     .left-description {
