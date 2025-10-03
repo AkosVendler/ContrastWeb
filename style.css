@@ -276,7 +276,7 @@ body.loader-active {
     height: 100vh; /* Teljes viewport magasság */
     margin: 0;
     padding: 0;
-  }
+  } 
   .loader-container {
     position: fixed;
     inset: 0; /* top/right/bottom/left: 0 */
@@ -294,11 +294,8 @@ body.loader-active {
     align-items: center;
     justify-content: center;
   }
-  /* Opcionális: Ha van tartalom a loader alatt, rejtsd el */
-  body.loader-active > *:not(.loader-container) {
-    display: none;
-  }
-  
+
+
 
 /* HTML: <div class="loader"></div> */
 .loader {
