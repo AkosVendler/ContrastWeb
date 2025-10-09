@@ -998,7 +998,10 @@ body.loader-active {
 }
 
 .work-image-gallery img {
-    width: 100%;
+  width: 100%;
+  aspect-ratio: 4/3;  /* vagy 4/3, ami passzol */
+  object-fit: cover;
+  display: block;
 }
 
 .work-image-gallery {
@@ -1007,7 +1010,7 @@ body.loader-active {
     padding: 0 40px;
     box-sizing: border-box;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
