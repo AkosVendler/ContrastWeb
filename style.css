@@ -203,7 +203,7 @@ section.about h1 {
 
 .slider {
     position: relative;
-    max-width: 520px;
+    max-width: 720px;
     object-fit: cover;
     margin: 0 auto;
     overflow: hidden;
@@ -941,7 +941,21 @@ body.loader-active {
         font-weight: 500;
         line-height: 0.8;
     }
+
+    .contact-hero h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    width: 50%;
+    margin: 0;
+    line-height: 1;
+    }    
+
+    .contact-hero p {
+    font-size: 1rem;
+    width: 70%;
+    }  
 }
+
 
 
 
