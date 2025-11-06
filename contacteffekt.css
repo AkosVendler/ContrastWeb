@@ -134,3 +134,18 @@
         padding: 70px 20px;
     }
 }
+
+@media (max-width: 650px) {
+
+    .award {
+        padding: 60px 20px;
+    }
+
+    .award-overlay {
+        padding: 60px 20px;
+    }
+
+    .award h1 {
+        font-size: 2rem;
+    }
+}

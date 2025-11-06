@@ -203,7 +203,7 @@ section.about h1 {
 
 .slider {
     position: relative;
-    max-width: 520px;
+    max-width: 720px;
     object-fit: cover;
     margin: 0 auto;
     overflow: hidden;
@@ -683,6 +683,14 @@ body.loader-active {
         text-transform: uppercase;
         margin: 0;
     }
+
+    .scroll-reveal {
+        padding-top: 200px;
+    }
+
+    .about-info {
+        margin-top: 150px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -706,11 +714,12 @@ body.loader-active {
 @media (max-width: 400px) {
     .about-hero-h1 {
         font-weight: 400;
-        font-size: clamp(4.5rem, 2.748rem + 3.76vw, 4.688rem);
+        font-size: clamp(4.2rem, 2.4rem + 3.5vw, 4.3rem);
         text-transform: uppercase;
         margin: 0;
     }
 }
+
 
 @media (max-width: 375px) {
     .about-hero-h1 {
@@ -724,7 +733,9 @@ body.loader-active {
 /*work*/
 
 .heading {
-    padding: 200px 40px;
+    padding: 0px 40px;
+    padding-top: 200px;
+    padding-bottom: 80px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -750,7 +761,7 @@ body.loader-active {
 
 .gallery-container {
     width: 100%;
-    height: 200vh;
+    height: 300vh;
     padding: 0 40px;
 }
 
@@ -769,25 +780,41 @@ body.loader-active {
     height: auto;
     position: relative;
     overflow: hidden;
+    aspect-ratio: 4 / 3;
   }
   
   .gallery-image {
     width: 100%;
     height: 100%;
-    max-height: 700px; /* opcionális, hogy ne nyúljon végtelenre */
     object-fit: cover;
     cursor: pointer;
     transform: scale(1.2);
     transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
   }
   
-  .project-desc {
+ .project-desc {
+  position: absolute;       /* a képre kerül */
+  bottom: 0;               /* alul legyen */
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 5px 10px;
-  }
+.div1:hover .project-desc,
+.div2:hover .project-desc {
+  opacity: 1; /* csak hoverkor jelenjen meg */
+}
+
   
   /* RESPONSIVE BREAKPOINTS */
   
@@ -840,7 +867,9 @@ body.loader-active {
     }
 
     .heading {
-        padding: 100px 20px;
+        padding: 0px 20px;
+        padding-top: 100px;
+        padding-bottom: 40px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -920,12 +949,26 @@ body.loader-active {
     }
 
     .heading-text h1 {
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 0;
         font-weight: 500;
         line-height: 0.8;
     }
+
+    .contact-hero h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    width: 50%;
+    margin: 0;
+    line-height: 1;
+    }    
+
+    .contact-hero p {
+    font-size: 1rem;
+    width: 70%;
+    }  
 }
+
 
 
 
@@ -1127,4 +1170,21 @@ body.loader-active {
         grid-area: 4 / 1 / 5 / 2;
     }
     
+}
+
+
+@media (max-width: 650px) {
+
+    .wrapper h2 {
+        width: min-content;
+        font-size: 2rem;
+    }
+
+    .contact-hero {
+        margin-bottom: 0px;
+    }
+
+    .header-info {
+        height: 50vh;
+    }
 }
