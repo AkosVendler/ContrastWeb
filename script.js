@@ -121,5 +121,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(() => {
         showSlide(currentIndex + 1);
-    }, 5000);
+    }, 1500);
 });

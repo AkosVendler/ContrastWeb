@@ -1,69 +1,74 @@
 document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // -----------------------------
     // Szöveg karakterekre bontása
+    // -----------------------------
     const splitText = (selector) => {
         const elem = document.querySelector(selector);
+        if (!elem) return null;
         const text = elem.innerText;
-        const chars = text.split(""); // A szöveget karakterekre bontja
+        const chars = text.split("");
         const charsContainer = document.createElement("div");
         const charsArray = [];
-    
+
         charsContainer.style.position = "relative";
         charsContainer.style.display = "inline-block";
-    
+
         chars.forEach((char) => {
             const charContainer = document.createElement("div");
             charContainer.style.position = "relative";
             charContainer.style.display = "inline-block";
-            charContainer.innerText = char === " " ? "\u00A0" : char; // Szóköz helyett non-breaking space
+            charContainer.innerText = char === " " ? "\u00A0" : char; // szóköz fix
             charsContainer.appendChild(charContainer);
             charsArray.push(charContainer);
         });
-    
-        elem.innerHTML = ""; // Eltávolítjuk a meglévő szöveget
-        elem.appendChild(charsContainer); // Hozzáadjuk az új struktúrát
-    
+
+        elem.innerHTML = "";
+        elem.appendChild(charsContainer);
         return charsArray;
     };
 
-    // Az animációs funkció
+    // -----------------------------
+    // Karakter animáció ScrollTrigger-rel
+    // -----------------------------
     const animateText = (selector) => {
-        const chars = splitText(selector); // Karakterekre bontás
+        const chars = splitText(selector);
         if (!chars) return;
 
         gsap.from(chars, {
-            delay:3.5,
+            delay: 3.5,
             duration: 0.5,
-            y: 100, // Kezdő pozíció
+            y: 100,
             opacity: 0,
-            stagger: 0.05, // Karakterenkénti időeltolódás
+            stagger: 0.05,
             ease: "power3.out",
             scrollTrigger: {
                 trigger: selector,
-                start: "top 80%", // Amikor az elem eléri a képernyőt
-                toggleActions: "play none none none", // Amikor láthatóvá válik
+                start: "top 80%",
+                toggleActions: "play none none none",
             }
         });
     };
 
-    // Trigger az animációra
-    animateText(".about-hero-h1"); // Az .about-hero-h1 elemre animáció
+    // Alkalmazzuk a karakteranimációt
+    animateText(".about-hero-h1");
 
 
 
-
+    // -----------------------------
+    // Navigációs link hover animáció
+    // -----------------------------
     const navLinks = document.querySelectorAll('.navhover');
 
-    // Hover események a navigációs linkekhez
     navLinks.forEach((link) => {
         const text = new SplitType(link, { types: 'lines' });
-        
-        // Hozzáadunk egy alávonalat a linkhez
+
         const underline = document.createElement('div');
         underline.classList.add('underline');
         link.appendChild(underline);
 
         link.addEventListener("mouseenter", () => {
-            // Animáljuk a sorokat és a vonalat
             gsap.from(text.lines, {
                 opacity: 0,
                 y: -15,
@@ -72,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 ease: "power2.inOut"
             });
 
-            // Vonalként animáljuk a vonalat
             gsap.to(underline, {
                 scaleX: 1,
                 transformOrigin: "bottom left",
@@ -81,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         link.addEventListener("mouseleave", () => {
-            // Visszaállítjuk a sorokat és a vonalat
             gsap.to(text.lines, {
                 opacity: 1,
                 y: 0,
@@ -97,22 +100,20 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+
+    // -----------------------------
+    // Lenis Smooth Scroll integráció
+    // -----------------------------
+    const lenis = new Lenis();
+
+    lenis.on("scroll", () => {
+        ScrollTrigger.update();
+        gsap.updateRoot();
+    });
+
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
 });
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-const lenis = new Lenis();
-
-lenis.on("scroll", () => {
-    ScrollTrigger.update();
-    gsap.updateRoot();
-});
-
-
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-});
-
-gsap.ticker.lagSmoothing(0);
-

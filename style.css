@@ -272,17 +272,22 @@ section.footer {
 body.loader-active {
     /* Amikor a loader aktív: */
     background-color: #000 !important;
-    overflow: hidden; /* Megakadályozza a scrollozást, így az address bar ragad */
-    height: 100vh; /* Teljes viewport magasság */
+    overflow: hidden;
+    /* Megakadályozza a scrollozást, így az address bar ragad */
+    height: 100vh;
+    /* Teljes viewport magasság */
     margin: 0;
     padding: 0;
-  } 
-  .loader-container {
+}
+
+.loader-container {
     position: fixed;
-    inset: 0; /* top/right/bottom/left: 0 */
+    inset: 0;
+    /* top/right/bottom/left: 0 */
     background-color: #000;
     width: 100%;
-    min-height: 100dvh; /* Dinamikus viewport iOS-re */
+    min-height: 100dvh;
+    /* Dinamikus viewport iOS-re */
     /* Extra: safe area inset-ek a teljes lefedéshez */
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
@@ -293,7 +298,7 @@ body.loader-active {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
 
 
@@ -436,6 +441,7 @@ body.loader-active {
     .hero-text h1 {
         font-size: 3rem;
     }
+
     .footer p {
         width: 70%;
         text-align: center;
@@ -477,7 +483,7 @@ body.loader-active {
     text-align: left;
     padding-block: clamp(8rem, 25vh, 20rem);
     height: 70vh;
-    margin-top: 600px;
+    margin-top: 100px;
 }
 
 .scroll-reveal p {
@@ -522,10 +528,10 @@ body.loader-active {
 .about-info {
     width: 100%;
     height: 100vh;
-    margin-top: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #000;
     flex-direction: column;
     text-transform: uppercase;
     font-weight: 600;
@@ -546,8 +552,33 @@ body.loader-active {
     line-height: 1.5;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 0;
+}
 
-@media (max-width: 1910px){
+.line {
+    width: 90%;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.line span {
+    position: absolute;
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    text-transform: uppercase;
+    will-change: transform;
+    display: inline-block;
+}
+
+
+@media (max-width: 1910px) {
     .about-hero-h1 {
         font-weight: 400;
         font-size: 18rem;
@@ -642,13 +673,13 @@ body.loader-active {
     .upper-info p {
         font-size: 2rem;
     }
-}    
+}
 
 @media (max-width: 770px) {
     .upper-info p {
         font-size: 1.5rem;
     }
-}  
+}
 
 @media (max-width: 500px) {
 
@@ -660,7 +691,7 @@ body.loader-active {
         font-size: 1.2rem;
         width: 80%;
     }
-}   
+}
 
 @media (max-width: 1490px) {
     .about-hero-h1 {
@@ -691,6 +722,24 @@ body.loader-active {
     .about-info {
         margin-top: 150px;
     }
+
+    .line {
+        width: 90%;
+        height: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    .line span {
+        position: absolute;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.1;
+        text-transform: uppercase;
+        will-change: transform;
+        display: inline-block;
+    }
 }
 
 @media (max-width: 500px) {
@@ -718,15 +767,35 @@ body.loader-active {
         text-transform: uppercase;
         margin: 0;
     }
+
+    .line span {
+        position: absolute;
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        will-change: transform;
+        display: inline-block;
+    }
 }
 
 
 @media (max-width: 375px) {
     .about-hero-h1 {
         font-weight: 400;
-        font-size: clamp(3.5rem, 1.5rem , 2.5rem);
+        font-size: clamp(3.5rem, 1.5rem, 2.5rem);
         text-transform: uppercase;
         margin: 0;
+    }
+
+    .line span {
+        position: absolute;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.1;
+        text-transform: uppercase;
+        will-change: transform;
+        display: inline-block;
     }
 }
 
@@ -756,7 +825,7 @@ body.loader-active {
 }
 
 
-    
+
 
 
 .gallery-container {
@@ -767,83 +836,91 @@ body.loader-active {
 
 .grid-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* alap: 2 oszlop */
+    grid-template-columns: repeat(2, 1fr);
+    /* alap: 2 oszlop */
     grid-template-rows: auto;
     grid-gap: 20px;
     width: 100%;
-    height: auto; /* ne legyen fix vh, hanem alkalmazkodjon */
+    height: auto;
+    /* ne legyen fix vh, hanem alkalmazkodjon */
     margin-bottom: 40px;
-  }
-  
-  .div1, .div2 {
+}
+
+.div1,
+.div2 {
     width: 100%;
     height: auto;
     position: relative;
     overflow: hidden;
     aspect-ratio: 4 / 3;
-  }
-  
-  .gallery-image {
+}
+
+.gallery-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     cursor: pointer;
     transform: scale(1.2);
     transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
-  }
-  
- .project-desc {
-  position: absolute;       /* a képre kerül */
-  bottom: 0;               /* alul legyen */
-  left: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding: 5px 10px;
-  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+}
+
+.project-desc {
+    position: absolute;
+    /* a képre kerül */
+    bottom: 0;
+    /* alul legyen */
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .div1:hover .project-desc,
 .div2:hover .project-desc {
-  opacity: 1; /* csak hoverkor jelenjen meg */
+    opacity: 1;
+    /* csak hoverkor jelenjen meg */
 }
 
-  
-  /* RESPONSIVE BREAKPOINTS */
-  
-  /* Tablet - 900px alatt egy oszlop */
-  @media (max-width: 900px) {
-    .grid-gallery {
-      grid-template-columns: 1fr;
-      grid-gap: 15px;
-    }
-    .gallery-image {
-      max-height: 400px;
-    }
-  }
-  
-  /* Mobil - 600px alatt */
-  @media (max-width: 600px) {
-    .gallery-image {
-      max-height: 300px;
-    }
-    .project-desc {
-      font-size: 1rem;
-      padding: 4px 8px;
-    }
-  }
 
-  .gallery-image:hover {
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet - 900px alatt egy oszlop */
+@media (max-width: 900px) {
+    .grid-gallery {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .gallery-image {
+        max-height: 400px;
+    }
+}
+
+/* Mobil - 600px alatt */
+@media (max-width: 600px) {
+    .gallery-image {
+        max-height: 300px;
+    }
+
+    .project-desc {
+        font-size: 1rem;
+        padding: 4px 8px;
+    }
+}
+
+.gallery-image:hover {
     filter: opacity(0.8);
     transform: scale(1);
-  }
+}
 
 
 .project-desc {
@@ -858,7 +935,7 @@ body.loader-active {
 }
 
 .project-desc p {
-    margin:5px 10px;
+    margin: 5px 10px;
 }
 
 @media (max-width: 900px) {
@@ -873,7 +950,7 @@ body.loader-active {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        align-items:  flex-start;
+        align-items: flex-start;
     }
 
     .heading-text h1 {
@@ -956,17 +1033,17 @@ body.loader-active {
     }
 
     .contact-hero h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    width: 50%;
-    margin: 0;
-    line-height: 1;
-    }    
+        font-size: 3rem;
+        font-weight: 500;
+        width: 50%;
+        margin: 0;
+        line-height: 1;
+    }
 
     .contact-hero p {
-    font-size: 1rem;
-    width: 70%;
-    }  
+        font-size: 1rem;
+        width: 70%;
+    }
 }
 
 
@@ -1041,10 +1118,11 @@ body.loader-active {
 }
 
 .work-image-gallery img {
-  width: 100%;
-  aspect-ratio: 4/3;  /* vagy 4/3, ami passzol */
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    aspect-ratio: 4/3;
+    /* vagy 4/3, ami passzol */
+    object-fit: cover;
+    display: block;
 }
 
 .work-image-gallery {
@@ -1101,11 +1179,13 @@ body.loader-active {
     }
 
     .left-wrapper {
+        width: 90%;
+        text-align: center;
         justify-content: center;
         align-items: center;
         gap: 0;
         margin-bottom: 20vh;
-        
+
     }
 
     .right-wrapper {
@@ -1154,29 +1234,30 @@ body.loader-active {
         grid-column-gap: 10px;
         grid-row-gap: 20px;
     }
+
     .image1 {
         grid-area: 1 / 1 / 2 / 2;
     }
-    
+
     .image2 {
         grid-area: 2 / 1 / 3 / 2;
     }
-    
+
     .image3 {
         grid-area: 3 / 1 / 4 / 2;
     }
-    
+
     .image4 {
         grid-area: 4 / 1 / 5 / 2;
     }
-    
+
 }
 
 
 @media (max-width: 650px) {
 
     .wrapper h2 {
-        width: min-content;
+        width: auto;
         font-size: 2rem;
     }
 

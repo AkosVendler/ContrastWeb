@@ -47,6 +47,8 @@
     text-transform: uppercase;
     font-size: 4rem;
     margin: 0;
+    max-width: auto;
+    width: auto;
 }
 
 .award-overlay {
@@ -75,6 +77,7 @@
 
 .award-text {
     font-size: 2rem;
+    width: min-content;
 }
 
 
@@ -147,5 +150,12 @@
 
     .award h1 {
         font-size: 2rem;
+        max-width: 200px;
+        width: auto;
+    }
+
+    .award h1:nth-child(2){
+        font-size: 1.5rem;
+        text-align: right;
     }
 }
