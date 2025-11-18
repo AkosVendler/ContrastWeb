@@ -58,10 +58,18 @@
             <a class="nav-link" href="./contact.html">Kapcsolat</a>
         </div>
         <div class="hero-container">
-            <div class="hero-text">
-                <h1>Contrast Design</h1>
+            <h1 class="hero-title">Contrast Design</h1>
+            <div class="hero-flex-container">
+                <div class="flex-link-container">
+                    <a href="./sendEmail.html">Kérj Ajánlatot</a>
+                    <img src="./assets/arrow.svg" alt="arrow">
+                </div>
             </div>
-            <div class="hero-image"></div>
+            <div class="image-flex-container">
+                <img src="./assets/project-008-12.webp" alt="">
+                <img src="./assets/Okonyha3.webp" alt="">
+                <img src="./assets/dolgozo4.webp" alt="">
+            </div>
         </div>
 
         <div class="spacer"></div>
@@ -80,7 +88,7 @@
 
         <section class="about">
             <h1>Stílus. Harmónia. Karakter.
-                <br/>
+                <br />
                 Lakberendezés és dekoráció.
             </h1>
         </section>
@@ -126,7 +134,11 @@
                 <a href="./work.html">MUNKÁIM</a>
                 <a href="./contact.html">KAPCSOLAT</a>
             </div>
-            <p>copyright © ContrastDesgin 2025 Alexa Mariann e.v.</p>
+            <div class="footer-text-container">
+                <p>copyright © ContrastDesgin <span id="currentdate"></span> Alexa Mariann e.v.</p>
+                <p>A weboldalt a <a href="https://www.instagram.com/motion._studio/">Motion Studio</a> készítette .</p>
+            </div>
+
         </section>
 
     </div>
@@ -144,6 +156,7 @@
 
     <!-- Your custom script -->
     <script src="./script.js"></script>
+    <script src="date.get.js"></script>
     <script src="./loader.js"></script>
 </body>
 

@@ -14,6 +14,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.ticker.lagSmoothing(0);
 
+    const title = document.querySelector(".hero-title");
+    let letters = title.textContent.split("");
+
+    title.innerHTML = letters.map(letter => {
+        if (letter === " ") return `<span class="letter-space">&nbsp;</span>`;
+        return `<span class="letter">${letter}</span>`;
+    }).join("");
+
+    gsap.from(".letter", {
+        delay: 4,
+        opacity: 0,
+        y: 80,
+        stagger: 0.04,
+        duration: 1.2,
+        ease: "power4.out"
+    });
+
+    gsap.from(".flex-link-container", {
+        delay: 4.5,
+        opacity: 0,
+        y: -20,
+        stagger: 0.1,
+        duration: 0.5,
+        ease: "power4.out"
+    });
+
+
+    gsap.from(".image-flex-container", {
+        delay: 4.5,
+        opacity: 0,
+        y: 40,
+        stagger: 2,
+        duration: 2,
+        ease: "power4.out"
+    });
+
+
+
     // Pinned szekciók kezelése
     ScrollTrigger.create({
         trigger: ".pinned",
