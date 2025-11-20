@@ -156,8 +156,57 @@ document.addEventListener("DOMContentLoaded", () => {
             if (page) window.location.href = page;
         });
     });
-
+  
     setInterval(() => {
         showSlide(currentIndex + 1);
     }, 1500);
 });
+
+
+gsap.registerPlugin(CustomEase);
+gsap.registerPlugin(SplitText);
+
+
+CustomEase.create("custom-ease", "0.87, 0, 0.13, 1");
+
+function initAnimation() {
+  const $buttonTitle = document.querySelector('.arrow-button__title');
+
+  
+  const splitText = new SplitText($buttonTitle, {
+    type: 'chars',
+    charsClass: "stagger-char"
+  });
+  
+  const letters = $buttonTitle.querySelectorAll('.stagger-char');
+  if (!letters.length) return;
+  
+  letters.forEach(charInner => {
+    charInner.setAttribute('data-letter', charInner.textContent);
+  });
+  
+  const animConfig = {
+    duration: 0.7,
+    ease: "custom-ease",
+    stagger: { each: 0.015 }
+  };
+  
+  const arrowAnimConfig = {
+    duration: 0.7,
+    ease: "custom-ease"
+  };
+  
+  $buttonTitle.parentElement.addEventListener('mouseenter', () => {
+    gsap.to(letters, { ...animConfig, y: "-1.1em" });
+  });
+  
+  $buttonTitle.parentElement.addEventListener('mouseleave', () => {
+    gsap.to(letters, { ...animConfig, y: "0em" });
+  });
+  
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initAnimation();
+});
+
